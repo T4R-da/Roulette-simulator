@@ -119,7 +119,7 @@ inline void Booting() {
 }
 
 inline void printRouletteTable(int selection = -1) {
-    std::cout << "\n          " << (selection == 0 ? MAGENTA : GREEN) << " [00] [ 0 ] " << RESET << "\n";
+    std::cout << "\n              " << (selection == 0 ? MAGENTA : GREEN) << "  [ 0 ]  " << RESET << "\n";
 
     for (int row = 3; row >= 1; row--) {
         std::cout << "    ";

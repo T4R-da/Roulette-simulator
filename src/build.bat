@@ -1,1 +1,1 @@
-g++ main.cpp -o Fortune-Wheel.exe -lwinmm -lpthread -lm
+g++ main.cpp -o roulette.exe -lwinmm -lpthread -lm

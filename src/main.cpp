@@ -131,19 +131,16 @@ int main() {
                     playerBalance += winAmt;
                     std::cout << GREEN << BOLD << "\nWINNER! Result: " << res.number << " " << res.getColor() << "\n";
                     std::cout << "You won: $" << winAmt << RESET << "\n";
-                    // Shortened wait time from 3000ms to 1000ms
-                    if (audio) { ma_engine_play_sound(&engine, "jackpot.wav", NULL); sleepMs(1000); }
+                    if (audio) { ma_engine_play_sound(&engine, "win.wav", NULL); sleepMs(3500); system("cls"); }
                 } else {
                     std::cout << RED << BOLD << "\nLOSS! Result: " << res.number << " " << res.getColor() << "\n";
                     std::cout << "You lost: -$" << bet << RESET << "\n";
-                    // Shortened wait time from 2000ms to 800ms
-                    if (audio) { ma_engine_play_sound(&engine, "fart.wav", NULL); sleepMs(800); }
+                    if (audio) { ma_engine_play_sound(&engine, "loss.wav", NULL); sleepMs(4000); }
                 }
 
                 if (audio) ma_sound_start(&bgm);
 
                 // Fully wipes the screen so the spin animation doesn't linger at the bottom
-                sleepMs(2000);
                 system("cls"); 
             }
         }
